@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefan Tapu's Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+            position: relative;
+        }
+        .theme-switch {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        h1, h2, h3 {
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .contact-info, .skills, .languages, .experience, .education {
+            padding-left: 0;
+        }
+        .job, .education-item {
+            margin-bottom: 20px;
+        }
+        a {
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Dark theme styles */
+        body.dark-theme {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .dark-theme .container {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
+        .dark-theme a {
+            color: #bb86fc;
+        }
+        .dark-theme h1, .dark-theme h2, .dark-theme h3 {
+            color: #bb86fc;
+        }
+        .dark-theme .theme-switch {
+            color: #fff;
+        }
+        /* Light theme styles */
+        body.light-theme {
+            background-color: #f5f5f5;
+            color: #000000;
+        }
+        .light-theme .container {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .light-theme a {
+            color: #1a73e8;
+        }
+        .light-theme h1, .light-theme h2, .light-theme h3 {
+            color: #1a73e8;
+        }
+        .light-theme .theme-switch {
+            color: #000;
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <button class="theme-switch" onclick="toggleTheme()">🌙</button>
+    <div class="container">
+        <header>
+            <h1>Stefan Tapu</h1>
+            <p>Account Executive, Spain</p>
+        </header>
+        <section class="contact-info section">
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:stefantapu@gmail.com">stefantapu@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/stefan-tapu" target="_blank">www.linkedin.com/in/stefan-tapu</a></p>
+        </section>
+        <section class="skills section">
+            <h2>Top Skills</h2>
+            <ul>
+                <li>Customer Engagement</li>
+                <li>Deal Closure</li>
+                <li>Lead Qualification</li>
+            </ul>
+        </section>
+        <section class="languages section">
+            <h2>Languages</h2>
+            <ul>
+                <li>Romanian: Native or Bilingual</li>
+                <li>Russian: Native or Bilingual</li>
+                <li>English: Professional Working</li>
+                <li>Spanish: Native or Bilingual</li>
+            </ul>
+        </section>
+        <section class="experience section">
+            <h2>Experience</h2>
+            <div class="job">
+                <h3><a href="https://mere.pro/es/">MERE</a> - Cashier Supervisor</h3>
+                <p>March 2024 - Present (4 months), Spain</p>
+                <ul>
+                    <li>Customer Communication & Negotiation: Excelled in communicating with customers, resolving issues, and negotiating to ensure satisfaction.</li>
+                    <li>Process & Workflow Optimization: Implemented improvements to enhance efficiency and reduce transaction times.</li>
+                    <li>Team Collaboration: Worked with the department head and team members to ensure smooth operations.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3><a href="https://www.coolmod.com" target="_blank">COOLMOD</a> - Personalized Computer Assembly Technician</h3>
+                <p>June 2020 - February 2022 (1 year 9 months), Spain</p>
+                <ul>
+                    <li>Collaborated with the workshop manager to identify hardware causing most failures, reducing returns by 30% and saving on shipping and return costs.</li>
+                    <li>Optimized workflow by introducing an OS cloning machine, cutting assembly time by 20 minutes and enabling delivery of 15 additional computers per week.</li>
+                    <li>Assembled over 1400 computers worth €1.5M, achieving 99% customer satisfaction for assembly quality and performance.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="education section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Higher Degree</h3>
+                <p>IES El Caminàs, Multiplatform Application Development</p>
+                <p>September 2022 - June 2024</p>
+            </div>
+            <div class="education-item">
+                <h3>Intermediate Degree</h3>
+                <p>IES Alonso de Avellaneda, Microcomputer Systems and Networks</p>
+                <p>September 2018 - June 2020</p>
+            </div>
+        </section>
+    </div>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const button = document.querySelector('.theme-switch');
+            body.classList.toggle('dark-theme');
+            body.classList.toggle('light-theme');
+            if (body.classList.contains('dark-theme')) {
+                button.textContent = '☀️';
+            } else {
+                button.textContent = '🌙';
+            }
+        }
+    </script>
+</body>
+</html>
