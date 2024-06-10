@@ -24,7 +24,7 @@
         }
         .container {
             width: 80%;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 40px auto;
             padding: 20px;
             border-radius: 5px;
@@ -38,13 +38,13 @@
         .section {
             margin-bottom: 40px;
             border-left: 4px solid #1a73e8;
-            padding-left: 10px;
+            padding-left: 20px; /* Adjust this value to increase or decrease the space */
         }
         .dark-theme .section {
             border-left: 4px solid #bb86fc;
         }
         .contact-info, .skills, .languages, .experience, .education {
-            padding-left: 0;
+            padding-left: 9;
         }
         .job, .education-item {
             margin-bottom: 20px;
@@ -165,9 +165,9 @@
             body.classList.toggle('dark-theme');
             body.classList.toggle('light-theme');
             if (body.classList.contains('dark-theme')) {
-                button.textContent = '🌙';
-            } else {
                 button.textContent = '☀️';
+            } else {
+                button.textContent = '🌙';
             }
         }
     </script>
